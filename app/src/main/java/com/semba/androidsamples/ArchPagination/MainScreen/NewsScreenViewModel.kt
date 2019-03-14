@@ -10,16 +10,19 @@ import com.semba.androidsamples.ArchPagination.Data.NewsDataSourceClass
 import com.semba.androidsamples.ArchPagination.Data.NewsDataSourceFactory
 import com.semba.androidsamples.ArchPagination.Data.Repository
 import io.reactivex.disposables.CompositeDisposable
+import javax.inject.Inject
 
-class NewsScreenViewModel: ViewModel {
+class NewsScreenViewModel: ViewModel() {
+
+    @Inject
+    lateinit var repository: Repository
 
     private var newsDataSourceFactory: NewsDataSourceFactory?
     private var liveData: LiveData<PagedList<NewsModel>>? = null
     private var progressLoadStatus: LiveData<String>? = null
     private var compositeDisposable = CompositeDisposable()
 
-    constructor(repository: Repository) : super()
-    {
+    init {
         newsDataSourceFactory = NewsDataSourceFactory(repository,compositeDisposable)
         initPaging()
     }

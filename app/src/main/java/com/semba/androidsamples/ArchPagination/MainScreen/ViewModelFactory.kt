@@ -14,7 +14,7 @@ class ViewModelFactory @Inject constructor(private val repository: Repository): 
     override fun <T : ViewModel?> create(modelClass: Class<T>) = with(modelClass) {
         when {
             isAssignableFrom(NewsScreenViewModel::class.java) ->
-                NewsScreenViewModel(repository)
+                NewsScreenViewModel()
             else-> {
                 val msg = "Unknown ViewModel Class : ${modelClass.name}"
                 Logger().e(msg)

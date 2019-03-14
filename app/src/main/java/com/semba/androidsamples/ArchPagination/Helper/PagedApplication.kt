@@ -1,23 +1,18 @@
 package com.semba.androidsamples.ArchPagination.Helper
 
 import android.app.Application
-import com.semba.androidsamples.ArchPagination.Dagger.AppComponent
-import com.semba.androidsamples.ArchPagination.Dagger.AppModule
-import com.semba.androidsamples.ArchPagination.Dagger.DaggerAppComponent
-import com.semba.androidsamples.ArchPagination.Dagger.UtilsModule
+import com.semba.androidsamples.ArchPagination.Dagger.*
 
 class PagedApplication: Application() {
 
-    val appComponent: AppComponent by lazy {
-        DaggerAppComponent
+    val utilsComponent: UtilsComponent by lazy {
+        DaggerUtilsComponent
             .builder()
-            .appModule(AppModule(this))
             .utilsModule(UtilsModule())
             .build()
     }
 
     override fun onCreate() {
         super.onCreate()
-        appComponent.inject(this)
     }
 }
