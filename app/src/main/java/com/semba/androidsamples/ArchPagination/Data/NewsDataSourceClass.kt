@@ -7,6 +7,7 @@ import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.semba.androidsamples.ArchPagination.Data.Models.NewsModel
+import com.semba.androidsamples.Shared.Constants
 import io.reactivex.disposables.CompositeDisposable
 import org.json.JSONObject
 

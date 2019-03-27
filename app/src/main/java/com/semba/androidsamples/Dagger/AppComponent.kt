@@ -1,6 +1,6 @@
-package com.semba.androidsamples.ArchPagination.Dagger
+package com.semba.androidsamples.Dagger
 
-import com.semba.androidsamples.ArchPagination.Helper.PagedApplication
+import com.semba.androidsamples.Helper.PagedApplication
 import dagger.Component
 import javax.inject.Singleton
 

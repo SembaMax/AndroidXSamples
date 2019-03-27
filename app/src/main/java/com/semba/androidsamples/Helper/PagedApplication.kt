@@ -1,7 +1,7 @@
-package com.semba.androidsamples.ArchPagination.Helper
+package com.semba.androidsamples.Helper
 
 import android.app.Application
-import com.semba.androidsamples.ArchPagination.Dagger.*
+import com.semba.androidsamples.Dagger.*
 
 class PagedApplication: Application() {
 

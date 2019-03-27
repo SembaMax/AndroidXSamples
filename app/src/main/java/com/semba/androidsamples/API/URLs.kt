@@ -1,4 +1,4 @@
-package com.semba.androidsamples.ArchPagination.API
+package com.semba.androidsamples.API
 
 object URLs {
     const val BASE_URL = "https://newsapi.org/v1/"

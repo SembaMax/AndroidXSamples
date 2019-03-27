@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+</RelativeLayout>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/tools"-->
+        <!--xmlns:fresco="http://schemas.android.com/apk/res-auto"-->
+        <!--app:ignore="NamespaceTypo">-->
+
+    <!--<data>-->
+        <!--<variable name="model" type="com.semba.androidsamples.ArchPagination.Data.Models.NewsModel"/>-->
+    <!--</data>-->
+
+    <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dp">-->
+
+
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                <!--android:id="@+id/img"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--app:imageURL="@{model.urlToImage}"-->
+                <!--fresco:roundAsCircle="true" />-->
+
+
+        <!--<TextView-->
+                <!--android:id="@+id/news_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginStart="10dp"-->
+                <!--android:layout_toEndOf="@+id/img"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toRightOf="@+id/img"-->
+                <!--android:text="@{model.title}"-->
+                <!--android:textSize="16dp" />-->
+
+
+    <!--</RelativeLayout>-->
+
+<!--</layout>-->

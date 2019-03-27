@@ -1,7 +1,8 @@
 package com.semba.androidsamples.ArchPagination.Data
 
 import com.google.gson.JsonElement
-import com.semba.androidsamples.ArchPagination.API.ApiCallInterface
+import com.semba.androidsamples.API.ApiCallInterface
+import com.semba.androidsamples.Shared.Constants
 import io.reactivex.Observable
 
 class Repository(private val apiCallInterface: ApiCallInterface) {

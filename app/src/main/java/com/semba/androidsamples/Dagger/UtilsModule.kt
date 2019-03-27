@@ -1,14 +1,15 @@
-package com.semba.androidsamples.ArchPagination.Dagger
+package com.semba.androidsamples.Dagger
 
 import androidx.lifecycle.ViewModelProvider
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.semba.androidsamples.ArchPagination.API.ApiCallInterface
-import com.semba.androidsamples.ArchPagination.API.URLs
+import com.semba.androidsamples.API.ApiCallInterface
+import com.semba.androidsamples.API.URLs
 import com.semba.androidsamples.ArchPagination.Data.Repository
 import com.semba.androidsamples.ArchPagination.MainScreen.ViewModelFactory
+import com.semba.androidsamples.Shared.NotificationManager
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -69,5 +70,9 @@ class UtilsModule {
     @Provides
     @Singleton
     fun getViewModelFactory(repository: Repository): ViewModelProvider.Factory = ViewModelFactory(repository)
+
+    @Provides
+    @Singleton
+    fun getNotificationManager(): NotificationManager = NotificationManager()
 
 }

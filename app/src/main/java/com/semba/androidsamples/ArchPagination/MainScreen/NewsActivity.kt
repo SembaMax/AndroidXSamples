@@ -3,12 +3,14 @@ package com.semba.androidsamples.ArchPagination.MainScreen
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.semba.androidsamples.ArchPagination.Helper.PagedApplication
+import com.semba.androidsamples.Helper.PagedApplication
+import com.semba.androidsamples.ArchPagination.MainScreen.Adapters.NewsAdapter
 import com.semba.androidsamples.R
 import kotlinx.android.synthetic.main.activity_news.*
 import retrofit2.Retrofit
 import javax.inject.Inject
+
+/** https://github.com/saquib3705/PagingLibrarySampleApp **/
 
 class NewsActivity : AppCompatActivity() {
 
@@ -17,7 +19,7 @@ class NewsActivity : AppCompatActivity() {
     lateinit var retrofit: Retrofit
 
     private var viewModel: NewsScreenViewModel? = null
-    private var adapter:
+    private var adapter: NewsAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

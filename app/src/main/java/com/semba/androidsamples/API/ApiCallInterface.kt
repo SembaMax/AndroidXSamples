@@ -1,4 +1,4 @@
-package com.semba.androidsamples.ArchPagination.API
+package com.semba.androidsamples.API
 
 import com.google.gson.JsonElement
 import io.reactivex.Observable
