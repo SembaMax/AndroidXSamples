@@ -27,6 +27,23 @@ class UtilsModule {
 
     @Provides
     @Singleton
+    fun getRequestHeader(): OkHttpClient
+    {
+        val okHttpClient = OkHttpClient.Builder()
+        okHttpClient.addInterceptor {
+            val original = it.request()
+            val request = original.newBuilder().build()
+            it.proceed(request)
+        }
+            .connectTimeout(100,TimeUnit.SECONDS)
+            .writeTimeout(100,TimeUnit.SECONDS)
+            .readTimeout(100,TimeUnit.SECONDS)
+
+        return okHttpClient.build()
+    }
+
+    @Provides
+    @Singleton
     fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): Retrofit
     {
         val retrofit = Retrofit.Builder()
@@ -44,23 +61,6 @@ class UtilsModule {
     fun getApiCallInterface(retrofit: Retrofit): ApiCallInterface
     {
         return retrofit.create(ApiCallInterface::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun getRequestHeader(): OkHttpClient
-    {
-        val okHttpClient = OkHttpClient.Builder()
-        okHttpClient.addInterceptor {
-            val original = it.request()
-            val request = original.newBuilder().build()
-            it.proceed(request)
-        }
-            .connectTimeout(100,TimeUnit.SECONDS)
-            .writeTimeout(100,TimeUnit.SECONDS)
-            .readTimeout(100,TimeUnit.SECONDS)
-
-        return okHttpClient.build()
     }
 
     @Provides

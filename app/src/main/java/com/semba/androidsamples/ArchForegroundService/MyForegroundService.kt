@@ -6,12 +6,11 @@ import android.os.IBinder
 import com.semba.androidsamples.Helper.PagedApplication
 import com.semba.androidsamples.Shared.Constants
 import com.semba.androidsamples.Shared.NotificationManager
-import javax.inject.Inject
+import org.koin.android.ext.android.inject
 
 class MyForegroundService : Service() {
 
-    @Inject
-    lateinit var notificationManager: NotificationManager
+    val notificationManager: NotificationManager by inject()
 
     init {
         (applicationContext as PagedApplication).utilsComponent.inject(this)

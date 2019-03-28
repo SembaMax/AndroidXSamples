@@ -65,6 +65,16 @@ dependencies {
     /*Paging*/
     implementation "android.arch.paging:runtime:1.0.1"
 
+    /*KOIN*/
+    def koin_version = '2.0.0-rc-1'
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    //Kotlin Coroutines
+    def coroutinesVer = '1.2.0-alpha'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVer"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVer"
+
     implementation "android.arch.work:work-runtime:1.0.0"
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.android.support:design:28.0.0'
